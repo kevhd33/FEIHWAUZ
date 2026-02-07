@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Monde de FEIHWAUZ</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Curseur fée -->
+  <div id="fairy-cursor"></div>
+
+  <!-- Background animé -->
+  <div class="background"></div>
+
+  <!-- Particules arc-en-ciel -->
+  <div id="particles-container"
+       style="position:fixed; inset:0; pointer-events:none; z-index:1000;">
+  </div>
+
+  <!-- Musique -->
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="music-btn" class="magic-btn">🎵 Musique</button>
+
+  <!-- Header -->
+  <header class="header-container">
+    <h1 class="title">
+      Le Monde de <span class="highlight">FEIHWAUZ</span>
+    </h1>
+
+    <nav class="nav-menu">
+      <button class="magic-btn" onclick="turn(0)">Synopsis</button>
+      <button class="magic-btn" onclick="turn(1)">Univers</button>
+      <button class="magic-btn" onclick="turn(2)">Personnages</button>
+      <button class="magic-btn" onclick="turn(3)">Lecture</button>
+      <button class="magic-btn" onclick="turn(4)">Vidéos</button>
+      <button class="magic-btn" onclick="turn(5)">Dédicaces</button>
+      <button class="magic-btn" onclick="turn(6)">Autrice</button>
+    </nav>
+  </header>
+
+  <!-- Livre -->
+  <main class="book-container">
+
+    <!-- Couverture -->
+    <div class="cover">
+      <img src="couverture.png" alt="Couverture du livre">
+      <div class="cover-glow"></div>
+    </div>
+
+    <div class="book">
+
+      <!-- Synopsis -->
+      <section class="page active">
+        <h2 class="page-title">Synopsis</h2>
+        <p class="page-text">
+          Notre univers demeure empli de mystères, régi par des entités œuvrant
+          dans l’ombre pour maintenir l’équilibre des mondes.
+          <br><br>
+          Afin de préserver cet équilibre fragile, une jeune femme à l’ADN
+          singulier est envoyée à travers le temps jusqu’en l’an
+          <strong>911, en Auvergne</strong>.
+          Sa mission : rencontrer un jeune homme et enfanter un nouvel être
+          destiné à devenir le gardien d’un Avalon renaissant.
+          <br><br>
+          Après cette fresque médiévale, la saga se poursuit dans une époque
+          d’anticipation fantastique, avant de s’épanouir dans un futur lointain
+          aux accents de <strong>space opera</strong>.
+        </p>
+      </section>
+
+      <!-- Univers -->
+      <section class="page">
+        <h2 class="page-title">L’Univers de Feihwauz</h2>
+        <p class="page-text">
+          Après la chute d’Avalon, écrasé par l’avènement des nouvelles religions,
+          le monde ne disparaît pas.
+          <br><br>
+          Rien ne se perd, rien ne se crée : tout se transforme.
+          <br><br>
+          Feihwauz renaît des cendres d’Avalon grâce à Myrdhyn.
+          Univers en plein bourgeonnement, de nouvelles civilisations y émergent
+          avec l’espoir d’assagir l’humanité.
+          <br><br>
+          Les Akgus, formes primordiales des arbres sacrés, permettent aux prêtres
+          et prêtresses de la lune d’ouvrir des passages vers les multivers.
+        </p>
+      </section>
+
+      <!-- Personnages -->
+      <section class="page">
+        <h2 class="page-title">Les Personnages</h2>
+
+        <div class="character">
+          <h3>Lourine</h3>
+          <audio controls src="music/Thème de Lourine officiel.mp3"></audio>
+          <p class="page-text">Description du personnage Lourine.</p>
+          <img src="characters/lourine.jpg" alt="Lourine">
+        </div>
+
+        <div class="character">
+          <h3>Marthorm</h3>
+          <audio controls src="music/Thème de Marthorm officiel.mp3"></audio>
+          <p class="page-text">Description du personnage Marthorm.</p>
+          <img src="characters/marthorm.jpg" alt="Marthorm">
+        </div>
+
+        <div class="character">
+          <h3>Myrdhyn</h3>
+          <audio controls src="music/Thème de Myrdhynn v2.mp3"></audio>
+          <p class="page-text">Description du personnage Myrdhyn.</p>
+          <img src="characters/myrdhyn.jpg" alt="Myrdhyn">
+        </div>
+
+        <div class="character">
+          <h3>Drowïn</h3>
+          <audio controls src="music/Thème de Drowïn officiel.mp3"></audio>
+          <p class="page-text">Description du personnage Drowïn.</p>
+          <img src="characters/drowin.jpg" alt="Drowïn">
+        </div>
+      </section>
+
+      <!-- Lecture -->
+      <section class="page">
+        <h2 class="page-title">Lecture d’extrait</h2>
+        <p class="page-text">
+          Dans la lueur d’une vaste cheminée, Merlin en Mundo donne voix aux mots
+          de Feihwauz, face à une cathèdre vide.
+        </p>
+        <video controls width="100%">
+          <source src="videos/lecture.mp4" type="video/mp4">
+        </video>
+      </section>
+
+      <!-- Vidéos -->
+      <section class="page">
+        <h2 class="page-title">Vidéos YouTube</h2>
+        <p class="page-text">
+          Retrouvez ici lectures, présentations et créations autour de l’univers
+          de Feihwauz.
+        </p>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/ID_VIDEO"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </section>
+
+      <!-- Dédicaces -->
+      <section class="page">
+        <h2 class="page-title">Dédicaces</h2>
+        <p class="page-text">
+          Retrouvez Lucie Gluck lors de salons, médiathèques et rencontres
+          culturelles.
+        </p>
+        <ul class="signing-list">
+          <li>📍 Lieu – Date</li>
+          <li>📍 Lieu – Date</li>
+          <li>📍 Lieu – Date</li>
+        </ul>
+      </section>
+
+      <!-- Autrice -->
+      <section class="page">
+        <h2 class="page-title">L’Autrice</h2>
+        <p class="page-text">
+          Lucie Gluck est née à Caen le mercredi 17 mars 1982.
+          <br><br>
+          Passionnée par la Scandinavie, elle nourrit son imaginaire des
+          traditions anciennes.
+          <br><br>
+          Malgré la perte définitive de sa vue, elle poursuit son œuvre et fonde
+          l’association <strong>La Chandelle de Glace</strong>.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
